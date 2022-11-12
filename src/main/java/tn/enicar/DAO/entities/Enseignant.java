@@ -19,7 +19,7 @@ public class Enseignant {
 	
 	@Column(name="E_mailEns",length=30, nullable=false)
 	private String emailEns ;
-	
+
 	@Enumerated(EnumType.STRING)
 	Departement Departement ;
 

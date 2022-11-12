@@ -53,5 +53,5 @@ public class ChoixItemPK implements Serializable{
 		ChoixItemPK other = (ChoixItemPK) obj;
 		return Objects.equals(sujet, other.sujet) && Objects.equals(user, other.user);
 	}
-	    
+	
 }

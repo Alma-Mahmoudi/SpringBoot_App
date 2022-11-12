@@ -15,7 +15,7 @@ public class ChoixItem {
 	/*@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer IdChoix;*/
-
+	
 	@EmbeddedId
     @JsonIgnore
     private ChoixItemPK pk;
@@ -67,9 +67,7 @@ public class ChoixItem {
 	                Objects.equals(getSujet().getIdSujet(), that.getSujet().getIdSujet());
 	    }*/
 }
-	
-
-	
+		
 //-------------------------------------------------------------------------
 
    /* private static final long serialVersionUID =1L;

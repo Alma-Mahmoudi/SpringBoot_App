@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-//nahla Excel 
+//Excel
 
 @Entity 
 public class Etudiant {
@@ -19,7 +19,6 @@ public class Etudiant {
 	private String adr;
 	private String specialite;
 	private float score;
-	
 	
 	//Constructeur
 	public Etudiant() {}

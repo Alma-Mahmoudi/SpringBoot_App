@@ -36,9 +36,6 @@ public class User  implements Serializable{
 
 	@Column(name="role",length=100, nullable=false)
 	private String role ;
-
-	//@Enumerated(EnumType.STRING)
-	//tn.enicar.DAO.entities.enume.Role role ;
 	
 	/*@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(	name = "user_roles", 
@@ -46,8 +43,6 @@ public class User  implements Serializable{
 				inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private List<Role> roles ;
 	*/
-	
-	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(	name = "user_etudiants", 
 				joinColumns = @JoinColumn(name = "user_id"), 
@@ -55,11 +50,9 @@ public class User  implements Serializable{
 	private List<Etudiant> etudiants ; 
 	
 	
-	
 	//@JsonManagedReference
     @OneToMany(mappedBy = "pk.user", cascade = CascadeType.ALL)
     private List<ChoixItem> choixItems = new ArrayList<>();
-	
 	
 	//Constructure 
 	public User() {}
@@ -77,8 +70,7 @@ public class User  implements Serializable{
 		this.email = email;
 		this.password = password;
 		this.specialite = specialite;
-		this.choix=choix ; 
-		
+		this.choix=choix ; 	
 	}*/
 
 	//getters & setters
@@ -93,32 +85,19 @@ public class User  implements Serializable{
 	public Specialite getSpecialite() {return specialite;}
 	public void setSpecialite(Specialite specialite) {this.specialite = specialite;}
 	
-	/*
-	public List<Role> getRoles() {return roles;}
-	public void setRoles(List<Role> roles) {this.roles = roles;}*/
-	
 	public List<ChoixItem> getChoixItems() {return choixItems;}
 	public void setChoixItems(List<ChoixItem> choixItems) {this.choixItems = choixItems;}
 	
 	public List<Etudiant> getEtudiants() {return etudiants;}
 	public void setEtudiants(List<Etudiant> etudiants) {this.etudiants = etudiants;}
 	
+	public String getRole() { return role;}
+	public void setRole(String role) { this.role = role; }
+	
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", username=" + username + ", email=" + email + ", password=" + password
 				+ ", specialite=" + specialite + ", roles=" + role + ", cartItems=" +  "]";
-	}
-	
-	
-	
-	
-	
-	
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
 	}
 	@Override
 	public int hashCode() {
@@ -138,8 +117,5 @@ public class User  implements Serializable{
 				&& Objects.equals(role, other.role) && specialite == other.specialite && userId == other.userId
 				&& Objects.equals(username, other.username);
 	}
-	
-	
-
 
 }

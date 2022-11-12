@@ -76,7 +76,6 @@ public class Sujet implements Serializable{
 	public void setEmail_encadrant(String email_encadrant) {this.email_encadrant = email_encadrant;}
 	
 	
-	
 	/*public ChoixItem getChoix() {
 		return choix;
 	}
@@ -108,6 +107,5 @@ public class Sujet implements Serializable{
 				&& Objects.equals(encadrant, other.encadrant) && idSujet == other.idSujet
 				&& specialite == other.specialite && Objects.equals(titre, other.titre);
 	}
-	
 					 					
 }
