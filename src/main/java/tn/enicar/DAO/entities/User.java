@@ -34,7 +34,7 @@ public class User  implements Serializable{
 	@Enumerated(EnumType.STRING)
 	Specialite specialite ;
 
-	@Column(name="role",length=100, nullable=false)
+	@Column(name="role",length=100, nullable=true)
 	private String role ;
 	
 	/*@ManyToMany(fetch = FetchType.LAZY)
